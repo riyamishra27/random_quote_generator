@@ -1,0 +1,173 @@
+body {
+    font-family: "Arial", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: rgb(116, 77, 122); /* Soft pinkish background */
+}
+
+.container {
+    text-align: center;
+    background-color: #19030387;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 600px;
+}
+@font-face {
+    font-family: 'CustomFont';
+    src: url('path/to/your/font.woff2') format('woff2'),
+         url('path/to/your/font.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.quote {
+    font-size: 24px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    
+    padding: 15px;
+    
+    font-family: 'CustomFont', sans-serif;
+    font-style: italic; /* Add italic font style */
+    font-family: cursive, 'Quicksand', sans-serif; 
+    
+}
+#newQuoteBtn {
+    padding: 12px 24px;
+    font-size: 18px;
+    background-color: #80c7b6; /* Pastel green */
+    color: #fff;
+    
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#newQuoteBtn:hover {
+    background-color: #147ab5; /* Darker shade of pastel green on hover */
+}
+
+#newQuoteBtn:focus {
+    outline: none;
+}
+#saveQuoteBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#saveQuoteBtn:hover {
+    background-color: #0056b3;
+}
+
+#viewFavoritesBtn {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    margin-top: 10px;
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: #28a745; /* Green color */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none; /* Remove underline */
+}
+
+#viewFavoritesBtn:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+.container::before {
+    content: open-quote;
+    font-size: 72px;
+    position: absolute;
+    left: 20px;
+    top: -10px;
+    color: #80c7b6; /* Pastel green */
+}
+
+.container::after {
+    content: close-quote;
+    font-size: 72px;
+    position: absolute;
+    right: 20px;
+    bottom: -10px;
+    color: #80c7b6; /* Pastel green */
+}
+.user-input-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.user-input-section input {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.user-input-section button {
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+    /* Adjust styles for screens up to 768 pixels wide */
+
+    /* Example: Decrease font size for better readability on smaller screens */
+    .quote {
+        font-size: 1.2rem;
+    }
+
+    .author {
+        font-size: 0.9rem;
+    }
+
+    /* Example: Adjust button sizes for smaller screens */
+    .btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+
+    /* Example: Adjust dropdown size */
+    .dropdown {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+    /* Example: Ensure elements fit within the screen width */
+    .container {
+        max-width: 90%; /* Adjust as needed */
+        margin: 0 auto; /* Center container */
+    }
+
+    /* Example: Adjust padding or margins to improve spacing on smaller screens */
+    .container {
+        padding: 10px;
+    }
+
+    /* Example: Adjust margins between elements */
+    .btn, .dropdown {
+        margin: 5px;
+    }
+}
